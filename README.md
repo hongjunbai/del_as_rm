@@ -1,5 +1,5 @@
 # del_as_rm
-Worry about "rm -rf *"? Replace 'rm' by 'del'
+Worry about "rm -rf \*"? Replace 'rm' by 'del'
 
 
 A bash program feel somewhat like 'rm', but uses 'mv XXX ~/.Trash' to remove files.
