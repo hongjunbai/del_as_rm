@@ -13,4 +13,4 @@ $ chmod +x ~/bin/del
 
 
 ## Know issues
-Does not take any options other than files/dirctories
+Does not take any options other than file/dirctory names
