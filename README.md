@@ -11,14 +11,14 @@ If there is any file/dir have the same name as the to-be-removed file in ~/.Tras
 
 Put 'del' file in '~/bin' and make it executable:
 
-$ mv del ~/bin
+> $ mv del ~/bin
 
-$ chmod +x ~/bin/del
+> $ chmod +x ~/bin/del
 
 
 When use
 
-$ del files-or-dirs-to-be-removed
+> $ del files-or-dirs-to-be-removed
 
 
 ## Know issues
