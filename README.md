@@ -6,11 +6,12 @@ A bash program feel somewhat like 'rm', but uses 'mv XXX ~/.Trash' to remove fil
 
 ## Usage
 
-Place the 'del' file in '~/bin'
+Put 'del' file in '~/bin' and make it executable:
 
-Make it executable:
+$ mv del ~/bin
 
 $ chmod +x ~/bin/del
+
 
 When use
 
