@@ -12,5 +12,5 @@ Make it executable:
 $ chmod +x ~/bin/del
 
 
-Know problems:
+## Know issues
 Does not take any options other than files/dirctories
