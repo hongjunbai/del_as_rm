@@ -1,5 +1,5 @@
 # del_as_rm
-Worry about "rm -rf *"? Use a new command 'del' to replace 'rm'
+Worry about "rm -rf *"? Replace 'rm' by 'del'
 
 A bash program feel somewhat like 'rm', but uses 'mv XXX ~/.Trash' to remove files.
 
@@ -10,6 +10,9 @@ Place the 'del' file in '~/bin'
 
 Make it executable:
 $ chmod +x ~/bin/del
+
+When use
+$ del 'files-dirs-to-be-removed'
 
 
 ## Know issues
