@@ -10,5 +10,5 @@ do
 	else
 		tgt=$bn
 	fi	
-	mv -vf "$var" ~/.Trash/$tgt | gawk 'BEGIN{FS="->"} {print $1 }'
+	mv -vf "$var" ~/.Trash/$tgt | awk 'BEGIN{FS="->"} {print $1 }'
 done
