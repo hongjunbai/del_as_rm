@@ -9,9 +9,11 @@ A bash program feel somewhat like 'rm', but uses 'mv XXX ~/.Trash' to remove fil
 Place the 'del' file in '~/bin'
 
 Make it executable:
+
 $ chmod +x ~/bin/del
 
 When use
+
 $ del 'files-dirs-to-be-removed'
 
 
