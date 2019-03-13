@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "Following files are moved to ~/.Trash:"
+[ -e ~/.Trash ] || mdkir ~/.Trash
+for var in "$@"
+do
+	bn=$(basename $var)
+	if [ -e ~/.Trash/$bn ]; then
+		tgt=$bn.`date +"%Y.%m.%d-%H.%M.%S"`
+	else
+		tgt=$bn
+	fi	
+	mv -vf "$var" ~/.Trash/$tgt | gawk 'BEGIN{FS="->"} {print $1 }'
+done
