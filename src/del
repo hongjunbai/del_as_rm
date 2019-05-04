@@ -10,8 +10,8 @@ do
 	bn=$(basename $var)
 	# Append time tag to the existing file/directory in the trash directory
 	if [ -e $tgt_dir/$bn ]; then
-		taged_existing_file=$bn.`date -r $tgt_dir/$bn +"%Y.%m.%d-%H.%M.%S"`
-		mv $tgt_dir/$bn $tgt_dir/$taged_existing_file
+		tagged_existing_file=$bn.`date -r $tgt_dir/$bn +"%Y.%m.%d-%H.%M.%S"`
+		mv $tgt_dir/$bn $tgt_dir/$tagged_existing_file
 	fi
 	mv -v "$var" $tgt_dir/$bn | awk 'BEGIN{FS="->"} {print $1 }'
 done
