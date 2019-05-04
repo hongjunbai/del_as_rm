@@ -1,14 +1,17 @@
 #!/bin/sh
 
-echo "Following files are moved to ~/.Trash:"
-[ -e ~/.Trash ] || mdkir ~/.Trash
+# Modify it if a different trash directory is preferred
+tgt_dir=~/.Trash
+
+echo "Following files are moved to $tgt_dir:"
+[ -e $tgt_dir ] || mkdir $tgt_dir
 for var in "$@"
 do
 	bn=$(basename $var)
-	if [ -e ~/.Trash/$bn ]; then
-		tgt=$bn.`date +"%Y.%m.%d-%H.%M.%S"`
-	else
-		tgt=$bn
-	fi	
-	mv -vf "$var" ~/.Trash/$tgt | awk 'BEGIN{FS="->"} {print $1 }'
+	# Append time tag to the existing file/directory in the trash directory
+	if [ -e $tgt_dir/$bn ]; then
+		taged_existing_file=$bn.`date -r $tgt_dir/$bn +"%Y.%m.%d-%H.%M.%S"`
+		mv $tgt_dir/$bn $tgt_dir/$taged_existing_file
+	fi
+	mv -v "$var" $tgt_dir/$bn | awk 'BEGIN{FS="->"} {print $1 }'
 done
