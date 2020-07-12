@@ -10,16 +10,15 @@ If there is any file/dir have the same name as the to-be-removed file in _~/.Tra
 ## Usage
 
 Put 'del' file in '~/bin' and make it executable:
-
-> $ mv del ~/bin
-
-> $ chmod +x ~/bin/del
-
+``` shell
+$ mv del ~/bin
+$ chmod +x ~/bin/del
+```
 
 When in use,
-
-> $ del files-or-dirs-to-be-removed
-
+``` shell
+$ del files-or-dirs-to-be-removed
+```
 
 ## Know issues
 Does not take any options other than file/dirctory names
